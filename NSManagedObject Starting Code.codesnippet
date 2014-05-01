@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ManagedObject Starting Code</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (&lt;# ClassName #&gt; *)get&lt;# ClassName #&gt;With&lt;# UniqueAttribute #&gt;:(&lt;# AttributeType #&gt;)uniqueAttribute onContext:(NSManagedObjectContext *)context
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"&lt;# ClassName #&gt;" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"&lt;# AttributeName #&gt; == %@", uniqueAttribute];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error;
+    NSArray *items = [context executeFetchRequest:fetchRequest error:&amp;error];
+    
+    if ([items count] &gt; 0)
+    {
+        return [items lastObject];
+    }
+    return nil;
+}
+
++ (&lt;# ClassName #&gt; *)insertManagedObjectFromJSONObject:(id)JSON forContext:(NSManagedObjectContext *)context
+{
+    &lt;# ClassName #&gt; *object = [NSEntityDescription insertNewObjectForEntityForName:@"&lt;# ClassName #&gt;" inManagedObjectContext:context];
+    
+    [object updateWithJSONObject:JSON forContext:context];
+    
+    return object;
+}
+
+- (void)updateWithJSONObject:(id)JSON forContext:(NSManagedObjectContext *)context
+{
+    if ([JSON objectForKey:@"&lt;# JSONKey #&gt;"])
+    {
+        [self set&lt;# AttributeName #&gt;:[JSON objectForKey:@"&lt;#JSONKey #&gt;"]];
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6AE81898-9DF1-4B4C-A359-0D1F35C7AE95</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>a few code for custom NSManagedObject</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSManagedObject Starting Code</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
