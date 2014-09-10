@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ManagedObject Multiple Creation</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>for (NSDictionary *jsonDictionary in [&lt;# JSON #&gt; objectForKey:@"&lt;# JSONKey #&gt;"])
+	{
+		&lt;# ClassName #&gt; *managedObject = [&lt;# ClassName #&gt; get&lt;# ClassName #&gt;With&lt;#UniqueAttribute#&gt;:[jsonDictionary objectForKey:@"&lt;#JSONKey#&gt;"] onContext:&lt;#context#&gt;];
+
+		if (managedObject)
+		{
+			[managedObject updateWithJSONObject:jsonDictionary forContext:&lt;#context#&gt;];
+		}
+		else
+		{
+			managedObject = [&lt;#ClassName#&gt; insertManagedObjectFromJSONObject:jsonDictionary forContext:&lt;#context#&gt;];
+		}
+	}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AE6822E6-0844-48E0-A7E3-75F3C3031B42</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>a for loop on an array creating a NSManagedObject for each NSDictionary inside</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSManagedObject Multiple Creation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

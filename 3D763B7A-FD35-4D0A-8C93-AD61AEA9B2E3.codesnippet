@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>managedObject new key</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>if ([JSON objectForKey:@"&lt;# JSONKey #&gt;"])
+    {
+        [self set&lt;# AttributeName #&gt;:[JSON objectForKey:@"&lt;#JSONKey #&gt;"]];
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3D763B7A-FD35-4D0A-8C93-AD61AEA9B2E3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>add a new key in method -(void)updateWithJSONObject:(id)JSON</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSManagedObject update : new key</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

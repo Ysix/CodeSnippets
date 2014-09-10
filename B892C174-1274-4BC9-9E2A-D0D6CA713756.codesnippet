@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ManagedObject Multiple Creation With Suppression</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSMutableSet *tempSet = [[NSMutableSet alloc] init];
+
+			for (NSDictionary *jsonDictionary in [&lt;# JSON #&gt; objectForKey:@"&lt;# JSONKey #&gt;"])
+			{
+				&lt;# ClassName #&gt; *managedObject = [&lt;# ClassName #&gt; get&lt;# ClassName #&gt;With&lt;#UniqueAttribute#&gt;:[jsonDictionary objectForKey:@"&lt;#JSONKey#&gt;"] onContext:&lt;#context#&gt;];
+
+				if (managedObject)
+				{
+					[managedObject updateWithJSONObject:jsonDictionary forContext:&lt;#context#&gt;];
+				}
+				else
+				{
+                    managedObject = [&lt;#ClassName#&gt; insertManagedObjectFromJSONObject:jsonDictionary forContext:&lt;#context#&gt;];
+				}
+
+				[tempSet addObject:managedObject];
+			}
+
+            NSMutableSet *toDeleteSet = [[NSMutableSet alloc] initWith&lt;# Set/Array #&gt;:&lt;# sourceSet/sourceArray #&gt;];
+            [toDeleteSet minusSet:tempSet];
+
+// remove objects in toDeleteSet from sources</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B892C174-1274-4BC9-9E2A-D0D6CA713756</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>a for loop on an array creating a NSManagedObject for each NSDictionary inside removing the elements missing in the source</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSManagedObject Multiple Creation With Suppression</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
