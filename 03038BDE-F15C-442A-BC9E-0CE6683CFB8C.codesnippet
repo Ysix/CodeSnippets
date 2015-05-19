@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Common methods UIViewController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)loadView
+{
+	[super loadView];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+
+
+}
+
+- (void)drawViewIn:(UIInterfaceOrientation)orientation withDuration:(NSTimeInterval)duration
+{
+	[super drawViewIn:orientation withDuration:duration];
+
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+
+	[self loadData];
+}
+
+- (void)loadData
+{
+	// put this on loading data call back
+	[self refreshView];
+
+
+}
+
+- (void)refreshView
+{
+
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>03038BDE-F15C-442A-BC9E-0CE6683CFB8C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Common methods for UIViewController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
